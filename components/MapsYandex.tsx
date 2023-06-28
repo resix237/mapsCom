@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 interface Position {
     name: string;
@@ -15,6 +15,7 @@ function MapsYandex({ positions, markerColor }: any) {
                         geometry={position.coordinates}
                         options={{ iconColor: markerColor }}
                         properties={{ iconContent: position.name }}
+
                     />
                 ))}
             </Map>
